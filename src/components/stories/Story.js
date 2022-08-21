@@ -19,8 +19,6 @@ export const Story = ({ storyId }) => {
 
     const { title, id, url ,by } = story;
 
-    // console.log(`${story.title}`)
-
     
     const handleFavourite = (e)=>{
         setFavourite(!favourite)
@@ -42,33 +40,20 @@ export const Story = ({ storyId }) => {
         
         return story && url ? (
             <>
-            
-              <div className='col-sm-4'>
+              <div className='col-sm-4 p-4' >
                 <div  id={id}  ref={ref} className="card">
                   <div className='favourite' onClick={handleFavourite}>
                      { favourite ? <AiFillHeart id={id} /> : <AiOutlineHeart id={id} />}
                   </div>
                   <div className="card-body">
-                    <h5 className="card-title" ><a href={url}>Card title{title}</a></h5>
-                 
-                    <p className="card-text">BY : {by}</p>
-                    <a href={url} className="card-link">Blog Link : {url}</a>
+                    <h5 className="card-title" >Title : <a href={url}> {title}</a></h5>
+                    <p className="card-text">Author : {by}</p>
+                    <a>Blog Link : </a> <a href={url} className="card-link"> {url}</a>
                   </div>
                 </div>
               </div>
-              
-
-      
-          
-            {/* <div id={id}>
-          
-            <h1 > <a href={url}> {title}</a> </h1>
-            <p > Blog Link :  <a href={url}> {url} </a> </p>
-            <p> BY : {by}</p>
-            </div> */}
             </>
-        
-    ) : null;
+    ) : <h2>loading...</h2> ;
 
     
 
