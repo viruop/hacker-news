@@ -4,6 +4,7 @@ export const baseUrl = 'https://hacker-news.firebaseio.com/v0';
 export const newStoriesUrl = `${baseUrl}/topstories.json`;
 export const itemUrl = `${baseUrl}/item/`;
 
+//this function gets ids of stories/news
 export const getStories = async () => {
   try {
     const res = await axios.get(newStoriesUrl).then(({ data }) => data);
@@ -14,6 +15,7 @@ export const getStories = async () => {
   }
 };
 
+//this function gets news/stories
 export const getStory = async (storyId) => {
   try {
     const res = await axios
@@ -25,20 +27,6 @@ export const getStory = async (storyId) => {
   }
 };
 
-
-
-export const  postFavourite =  async (data) => {
-
-  try{ 
-    console.log(data)
-  }catch( err ){
-    console.log(err)
-  }
-
-      
-      
-
-}
 
 
 
