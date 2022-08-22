@@ -26,7 +26,7 @@ function Login(){
                             <div className="card bg-dark text-white" style={{borderRadius: '1rem'}}>
                             <div className="card-body p-5 text-center">
                                 <div className="mb-md-5 mt-md-4 pb-5">
-                                <h2 className="fw-bold mb-2 text-uppercase">Login</h2>
+                                <h2 className="fw-bold mb-2 text-uppercase">Hacker News WebApp</h2>
                                 <p className="text-white-50 mb-5">Please enter your username and password!</p>
                                 <div className="form-outline form-white mb-4">
                                     <input type="username"  className="form-control form-control-lg" ref={username} />Username
