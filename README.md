@@ -1,4 +1,4 @@
-Crendentials:
+Credentials:
 username: admin
 password: admin
 
